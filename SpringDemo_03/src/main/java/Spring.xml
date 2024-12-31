@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Constructor dependency injection -->
+	<bean id="customer" class="com.codegnan.beans.Customer">
+		<constructor-arg name="customerId" value="c-111" />
+		<constructor-arg name="customerName" value="Saikumar" />
+		<constructor-arg name="customerAddress" value="Hyd" />
+		<constructor-arg name="customerMobileNo" value="123456789" />
+	</bean>
+	
+	<bean id="item" class="com.codegnan.beans.Item">
+	<constructor-arg name="itemId" value="i-111" />
+	<constructor-arg name="itemName" value="Mobile" />
+	<constructor-arg name="itemPrice" value="20000" />
+	</bean>
+	
+	<bean id="order" class="com.codegnan.beans.Order">
+	<constructor-arg name="orderId" value="o-111" />
+	<constructor-arg name="orderName" value="Mobile-Order" />
+	<constructor-arg name="customer" ref="customer" />
+	<constructor-arg name="item" ref="item" />
+	</bean>
+
+</beans>

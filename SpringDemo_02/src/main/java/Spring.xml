@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.codegnan.beans.Employee" autowire="byType">
+		<property name="eno" value="222" />
+		<property name="ename" value="vinny" />
+		<property name="esal" value="40000" />
+		<!-- <property name="address" ref="address" /> -->
+	</bean>
+
+	<bean id="address" class="com.codegnan.beans.Address" >
+		<property name="city" value="hyd" />
+		<property name="street" value="ramanna" />
+		<property name="pin" value="500072" />
+	</bean>
+
+	<!-- more bean definitions go here -->
+
+</beans>
